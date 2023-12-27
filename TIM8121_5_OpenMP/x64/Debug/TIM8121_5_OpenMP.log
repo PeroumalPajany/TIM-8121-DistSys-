@@ -1,7 +1,0 @@
-﻿  BMPCreate.cpp
-C:\Users\pero1\source\repos\TIM8121_5_OpenMP\BMPCreate.cpp(2,1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
-C:\Users\pero1\source\repos\TIM8121_5_OpenMP\BMPCreate.cpp(28,13): warning C4849: OpenMP 'collapse' clause ignored in 'parallel for' directive
-C:\Users\pero1\source\repos\TIM8121_5_OpenMP\BMPCreate.cpp(31,34): warning C4838: conversion from 'int' to 'uint8_t' requires a narrowing conversion
-C:\Users\pero1\source\repos\TIM8121_5_OpenMP\BMPCreate.cpp(31,37): warning C4838: conversion from 'int' to 'uint8_t' requires a narrowing conversion
-C:\Users\pero1\source\repos\TIM8121_5_OpenMP\BMPCreate.cpp(31,40): warning C4838: conversion from 'int' to 'uint8_t' requires a narrowing conversion
-  TIM8121_5_OpenMP.vcxproj -> C:\Users\pero1\source\repos\TIM8121_5_OpenMP\x64\Debug\TIM8121_5_OpenMP.exe
