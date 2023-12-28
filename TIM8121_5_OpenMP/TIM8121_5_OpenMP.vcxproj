@@ -136,9 +136,6 @@
     <ClInclude Include="BMPCreate.h" />
     <ClInclude Include="BMPUtility.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="BACKUP.TXT" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

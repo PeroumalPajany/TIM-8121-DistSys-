@@ -6,7 +6,7 @@
 #include <vector>
 #include <bitset>
 
-int invertColorsInFile(std::string inFilePath, std::string outFilePath,int thrds);
+int invertColorsInFile(std::string inFilePath, std::string outFilePath, int thrds);
 
 void invertColors(char* imageData, int width, int height, int thrds);
 
