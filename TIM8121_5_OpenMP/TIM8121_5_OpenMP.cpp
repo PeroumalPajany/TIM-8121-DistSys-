@@ -4,7 +4,6 @@
 #include "BMPUtility.h"
 #include "BMPCreate.h"
 #include <omp.h>
-
 using namespace std;
 
 /****************************************************************
@@ -14,7 +13,6 @@ int main() {
 
 	printf("START\n");
 	auto beg = std::chrono::high_resolution_clock::now();
-
 	int t_threads = 3; // Configrable threads to use for OpenMP
 
 	/****************************************************************
@@ -86,6 +84,4 @@ int main() {
 	printf("END\n");
 
 	return 0;
-
-
 }
