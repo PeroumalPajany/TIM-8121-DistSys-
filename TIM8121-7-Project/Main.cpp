@@ -18,6 +18,9 @@ string getInvFileName(string fileName, string type) {
 	return fileName.substr(0, fileName.find(".")) + "_INVERTED_" + type;
 }
 
+/*********************************************************************************
+* CREATE BMP FILE
+**********************************************************************************/
 
 int createBasefile(string fileName, int sizeInKB, int r, int b, int g) {
 
@@ -34,7 +37,9 @@ int createBasefile(string fileName, int sizeInKB, int r, int b, int g) {
 }
 
 
-
+/*********************************************************************************
+* FAULT TOLERANT: RE-SUBMISSION WITH COMPARISON
+**********************************************************************************/
 int invertTaskResubmitFT(string imageFile) {
 
 	auto beg = std::chrono::high_resolution_clock::now();
@@ -57,7 +62,7 @@ int invertTaskResubmitFT(string imageFile) {
 		{
 #pragma omp section
 			{
-				invertColorsInImage(imageArray, t_threads);    //Fault Tolerant Main Thread-1 in 1 Core
+				invertColorsInImage(imageArray, t_threads);    //Fault Tolerant Main Thread-1 in one Core
 			}
 
 #pragma omp section
@@ -82,7 +87,9 @@ int invertTaskResubmitFT(string imageFile) {
 }
 
 
-// Function for redundancy and voting fault tolerance
+/*********************************************************************************
+* FAULT TOLERANT: REDUNDANCY VOTING
+**********************************************************************************/
 int  invertImageUsingRedundancyVotingFT(string imageFile) {
 
 	auto beg = std::chrono::high_resolution_clock::now();
@@ -156,7 +163,9 @@ int  invertImageUsingRedundancyVotingFT(string imageFile) {
 
 }
 
-
+/*********************************************************************************
+* FAULT TOLERANT: CHECK POINT RESTART
+**********************************************************************************/
 int invertImageUsingCheckPointRestartFT(string imageFile) {
 
 	auto beg = std::chrono::high_resolution_clock::now();
@@ -271,7 +280,6 @@ bool isBitMapFile(string fileName) {
 		std::cerr << "Cannot open the file --> " << fileName << std::endl;
 		return false;
 	}
-
 	char signature[2];
 	file.read(signature, 2);
 	if (signature[0] == 'B' && signature[1] == 'M') {
